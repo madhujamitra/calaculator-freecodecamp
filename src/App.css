@@ -1,42 +1,79 @@
-#root {
-  max-width: 1280px;
+/* Container styling */
+.container{
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  height:100vh;
+
+
+}
+
+
+.keyboard {
+  display: grid;
+  gap: 10px;
+  background-color: #FEDFE1; /* baby pink */
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 250px; /* adjust this if needed */
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  grid-template-columns: repeat(4, 1fr);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.Display{
+  color: black;
+  grid-column: 1 / -1;
+  padding: 10px;
+  font-size: 24px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  text-align: right;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  padding: 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+button:focus {
+  outline: none;
+}
+/* Hover effect for the button */
+button:hover {
+  /* This will give a slight opacity to the button on hover, 
+     making it appear lighter. Adjust the value if needed. */
+  opacity: 0.8;
+  /* You can also add a transform for a slight scaling effect on hover. */
+  transform: scale(1.05);
 }
 
-.card {
-  padding: 2em;
+/* Active (click) effect for the button */
+button:active {
+  /* This will make the button appear slightly darker when clicked. */
+  opacity: 0.6;
+  /* You can also add a transform for a slight push effect on click. */
+  transform: scale(0.95);
 }
 
-.read-the-docs {
-  color: #888;
+
+.light-gray {
+  background-color: #E5E5E5;
 }
+
+.dark-gray {
+  background-color: #A0A0A0;
+}
+
+.yellow {
+  background-color: #FFD700;
+}
+
+.equalbutton {
+  grid-column: 3 / -1;
+}
+
